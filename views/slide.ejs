@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js">
+</head>
+<style>
+    font-face {
+        font-family: Vermin vibes;
+        src: url(VerminVibes.ttf);
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Vermin Vibes;
+        user-select: none;
+
+    }
+
+    body {
+        background: linear-gradient(#212730, #111214);
+        background-attachment: fixed;
+    }
+
+
+    .header,
+    .footer {
+        position: relative;
+    }
+
+    .header_bg {
+        width: 100%;
+        height: 100vh;
+        background-size: cover;
+        justify-content: center;
+        display: flex;
+        align-content: center;
+        clip-path: circle(180vh at 50% -115vh);
+        position: absolute;
+        background-attachment: fixed;
+        top: -100px;
+        background-position:center;
+    }
+
+    .footer_bg {
+        width: 100%;
+        height: 100vh;
+    
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        position: absolute;
+        top: -50rem;
+        opacity: 0.1;
+        background-position:center ;
+    }
+
+    .slide-container {
+        display: inline-flex;
+        max-width: 1800px;
+        width: 100%;
+        padding: 40px 0;
+
+    }
+
+    .slide-content{
+        display: inline-flex;
+        margin: 0 40px;
+        padding: 40px 0px;
+        overflow: hidden;
+        border-radius: 5px;
+        -webkit-box-reflect: below -195px -webkit-gradient(linear, left top, left bottom)
+                from(transparent), color-stop(70% #000000), to rgb((250, 250, 250/400));
+
+    }
+
+    .card-weapper {
+        display: inline-flex;
+    }
+
+    .card-slide {
+        display: inline-flex;
+        border-radius: 12px;
+        width: 300px;
+        height: 480;
+        margin: 0 !important;
+    }
+
+    .card-slide img {
+        display: flex;
+        width: 80%;
+        height: 50%;
+      
+        border-radius:12px ;
+        object-fit: cover;
+        position: relative;
+        z-index: 2;
+    }
+</style>
+<body>
+    <section>
+        <div class="header">
+            <div class="header_bg"></div>
+        </div>
+        <div class="content_titles">
+            <h2>unique collection</h2>
+            <h2>of <span>pictures</span></h2>
+
+        </div>
+        <div class="slide-container">
+            <div class="slide-content">
+                <div class="card-weapper ">
+                    <div class="card-slide">
+                        <img src="shoe2.jpg">
+                        
+                    </div>
+
+                    <div class="card-slide">
+                        <img src="shoe2.jpg">
+                       
+                    </div>
+
+                    <div class="card-slide">
+                        <img src="shoe2.jpg">
+                        
+
+                    </div>
+
+                    <div class="card-slide">
+                        <img src="shoe4.jpg">
+                        
+
+                    </div>
+
+
+                    <div class="card-slide">
+                        <img src="shoe4.jpg">
+               
+                    </div>
+
+                    <div class="card-slide">
+                        <img src="shoe4.jpg">
+                      
+
+                    </div>
+
+                    <div class="card-slide">
+                        <img src="shoe4.jpg">
+                     
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-bg"></div>
+        </div>
+    </section>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
+<script>
+
+    var swiper = new Swiper(".slide-content", {
+        slidesPerview :3.35,
+        spaceBetween:0,
+        loop:true,
+        counterSlide:true,
+        fade:true
+    });
+
+</script>
+
+</html>

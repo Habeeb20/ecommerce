@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+            
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            font-family: 'poppins', sans-serif;
+        }
+
+        .container {
+            background-color: whitesmoke;
+            overflow: hidden;
+            margin: 10px;
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-right: auto;
+            margin-left: auto;
+            padding: 10px;
+            position: sticky;
+            top: 0;
+            left: 0;
+      
+
+
+        }
+
+        .container a {
+            display: inline-block;
+            padding: 10px;
+            padding-top: 25px;
+            margin-right:50px;
+            
+
+        }
+
+        .right a {
+            float: left;
+            margin-left: 200px;
+            color: #0000;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: large;
+            font-weight: 100;
+        }
+
+        .container a:hover,
+        .container a.active {
+            color: coral;
+        }
+
+        a {
+            float: right;
+            text-decoration: none;
+            color: black;
+            text-transform: capitalize;
+            font-size: 15px;
+            font-family: sans-serif;
+        }
+
+        .right {
+            float: left;
+            margin-left: -20%;
+            color: #0000;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: large;
+            font-weight: 100;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            font-weight: 800;
+        }
+
+        h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        h5 {
+            font-size: 1rem;
+            font-weight: 400;
+            color: #1d1d1d;
+
+        }
+
+        h6 {
+            color: #d8d8d8;
+        }
+        #home {
+            background-image: url("back.jpg");
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            background-position: top center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+
+        }
+
+        #home span {
+            color: coral;
+
+        }
+        button {
+            font-size: 0.6rem;
+            font-weight: 700;
+            outline: none;
+            border: none;
+            background-color: #1d1d1d;
+            color: aliceblue;
+            padding: 13px 30px;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+
+        button:hover {
+            background-color: #3a3833;
+
+
+        }
+
+
+        hr {
+            width: 30px;
+            height: 1px;
+            background-color: #fb774b;
+            margin-left: 49%;
+           
+        }
+        .containerr {
+            margin-left: 5%;
+        }
+        .row {
+            margin-left: 5%;
+            padding: 3%;
+        }
+
+        #new .row1 {
+            display: inline-flex;
+         
+        }
+
+
+        .row1 img {
+            width: 100%;
+            height: 60%;
+            background-position: center;
+            background-repeat: no-repeat;
+            
+            background-size: cover;
+            padding-bottom: -6%;
+          
+        }
+
+        .row1 img:nth-child(2){
+            width: 60%;
+        }
+
+        #new .one .details  {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transition: 0.3s ease;
+            top: 170%;
+
+        }
+
+        
+        #new .one .detail h2:hover{
+            color: salmon;
+        }
+
+        #new .one .details button{
+            display: inline-block;
+            font-size: 14px;
+            font-weight: 500;
+            color: #2a2a2a;
+            background: none;
+            text-transform: uppercase;
+            border-bottom: 1px solid #2a2a2a;
+            padding:1px;
+            transform: translateY(70px);
+            transition: 0.3s ease;
+
+        }
+
+        .text-uppercase {
+            margin-top: 1px;
+        }
+
+        #new .one .details h2 {
+            font-weight: 800;
+            font-size: 1.2rem;
+        }
+
+        #new .one:nth-child(1) .details{
+            left: 6%;
+        }
+
+        #new .one:nth-child(2) .details{
+            left: 40%;
+        }
+
+        #new .one:nth-child(3) .details h2, button{
+            left: 80%;
+        }
+
+
+
+
+        #new .one .details button:hover{
+            border-bottom: 1px solid white;
+            color: #fff;
+        }
+        #featured hr{
+            padding: 6px;
+        }
+
+        .contain{
+            text-align: center;
+            align-items: center;
+            top: 0;
+            margin-top: 5px;
+         
+            padding-bottom: 5px;
+        }
+
+        .roww {
+            display: inline-flex;
+            padding: 5px;
+
+        }
+        .roww .product {
+            text-align: center;
+            padding: 15px;
+            cursor: pointer;
+            margin-bottom: 2rem;
+
+        }
+
+        .product img{
+            transition: 0.3s;
+
+        }
+
+        .product:hover img {
+            opacity: 0.7;
+        }
+
+        .product .buy-btn {
+            background-color: #fb774b;
+            transform: translateY(20px);
+            
+            opacity: 0;
+            transition: 0.3s all;
+        }
+
+        .product:hover .buy-btn {
+    
+            transform: translateY(0);
+            opacity: 1;
+           
+        }
+
+
+        #banner {
+            background-image: url("banner.jpg");
+            width: 100%;
+            height: 60vh;
+            background-size: cover;
+            background-position: top 70px center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            margin-bottom: 20px;
+
+        }
+        #banner h4 {
+            color: #d8d8d8;
+
+        }
+
+        #banner h1 {
+            color: #fff;
+        }
+
+        #banner button {
+            background-color: #fb774b;
+        }
+
+        .roww1 {
+            display: inline-flex;
+            padding: 5px;
+
+        }
+        #clothes {
+            padding: 16px;
+        }
+        .contain1 hr {
+            background-color: #fb774b;
+        }
+
+        .contain1 {
+            text-align: center;
+            align-items: center;
+            top: 0;
+            margin-top: 5px;
+         
+            padding-bottom: 5px;
+        }
+
+        
+        .roww1 {
+            display: inline-flex;
+            padding: 5px;
+
+        }
+        .roww1 .product1 {
+            text-align: center;
+            padding: 15px;
+            cursor: pointer;
+            margin-bottom: 2rem;
+
+        }
+
+        .product1 img{
+            transition: 0.3s;
+            width: 100%;
+            height: 55%;
+            
+
+        }
+
+        .product1:hover img {
+            opacity: 0.7;
+        }
+
+        .product1 .buy-btn {
+            background-color: #fb774b;
+            transform: translateY(20px);
+            opacity: 0;
+            transition: 0.3s all;
+        }
+
+        .product1:hover .buy-btn {
+    
+            transform: translateY(0);
+            opacity: 1;
+           
+        }
+
+
+        
+
+     #banner1 {
+            background-image: url("banner11.webp");
+            width: 100%;
+            height: 60vh;
+            background-size: cover;
+            background-position: top 70px center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            padding-top: 1%;
+
+        }
+        #banner h4 {
+            color: #d8d8d8;
+
+        }
+
+        #banner h1 {
+            color: #fff;
+        }
+
+        #banner button {
+            background-color: #fb774b;
+        }
+
+         .row {
+            display: inline-flex;
+            padding: 7px;
+        }
+
+        .footer-one {
+            padding: 65px;
+        }
+
+        .footer-one h5 {
+            padding-bottom: 10px;
+        }
+
+        .footer-one li {
+            list-style: none;
+            color: #999;
+            font-size: 0.8rem;
+        }
+
+        .footer-one li:hover {
+            color: #d8d8d8;
+        }
+
+        footer p {
+            color: #999;
+        }
+
+        .row11 {
+            
+            padding: 5px;
+        }
+        
+        .row11 img {
+            padding: 15px;
+            width: 30%;
+        }
+
+        footer {
+            background-color: #222222;
+        }
+
+        footer h5 {
+            color: #d8d8d8;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+
+        .row12 img {
+            margin-left: 10%;
+        }
+
+        .row12 p {
+            text-align: center;
+            
+        }
+
+
+
+
+        
+
+
+        
+
+
+
+
+       
+
+     
+
+   
+
+        @media only screen and (max-width: 991px) {
+
+        }
+
+</style>
+<body>
+    <div class="container">
+        <div class="right">
+            <img src="logo1.png"><a href="#">rymo</a>
+        </div>
+        <a href="#">Contact Us</a>
+        <a href="#">About</a>
+        <a href="#">Blog</a>
+        <a href="#">shop</a>
+        <a href="#">Home</a>
+        
+    </div>
+
+    <section id="home">
+        <div class="containerr">
+            <h5>NEW ARRIVALS</h5>
+            <h1> <span>Best Price</span> This Year</h1>
+            <p>Shoomatic offers your very comfortable time <br>
+                on walking and exercises.
+            </p>
+            <button>Shop now</button>
+        </div>
+
+    </section>
+
+    <section id="brand">
+        <div class="row">
+            <img src="1.png">
+            <img src="2.png">
+            <img src="3.png">
+            <img src="4.png">
+            <img src="5.png">
+            <img src="6.png">
+
+        </div>
+
+    </section>
+
+    <section id="new">
+        <div class="row1">
+            <div class="one">
+                <img src="re1.jpg">
+                <div class="details">
+                    <h2>Extreme Rare Sneakers</h2>
+                    <button class="text-uppercase">Shop now</button>
+                </div>
+               
+            </div>
+
+            <div class="one">
+                <img src="re3.jpg">
+                <div class="details">
+                    <h2>Awesome Blank outfit</h2>
+                    <button class="text-uppercase">Shop now</button>
+                </div>
+               
+            </div>
+
+            <div class="one">
+                <img src="re2.jpg">
+                <div class="details">
+                    <h2>Sportwear Up to 50% off</h2>
+                    <button class="text-uppercase">Shop now</button>
+                </div>
+               
+            </div>
+        </div>
+
+    </section>
+
+    <section id="featured">
+        <div class="contain">
+            <h3>Our featured</h3>
+            <hr>
+            <p>Here you can check out our new products with fair price on rymo</p>
+
+        </div>
+        <div class="roww">
+            <div class="product">
+                <img class="img-fluid" src="1.jpg">
+                <h5 class="p-name">Sport shoe</h5>
+                <h4 class="p-price">$92.00</h4>
+                <button class="buy-btn">Buy now</button>
+            </div>
+
+            <div class="product">
+                <img class="img-fluid" src="2.jpg">
+                <h5 class="p-name">Sport shoe</h5>
+                <h4 class="p-price">$92.00</h4>
+                <button class="buy-btn">Buy now</button>
+            </div>
+
+            <div class="product">
+                <img class="img-fluid" src="3.jpg">
+                <h5 class="p-name">School bag</h5>
+                <h4 class="p-price">$92.00</h4>
+                <button class="buy-btn">Buy now</button>
+            </div>
+
+            <div class="product">
+                <img class="img-fluid" src="4.jpg">
+                <h5 class="p-name">Headwarmer</h5>
+                <h4 class="p-price">$92.00</h4>
+                <button class="buy-btn">Buy now</button>
+            </div>
+           
+        </div>
+
+    </section>
+
+    <section id="banner">
+        <div class="containerr">
+            <h4>MID SEASON'S SALE</h4>
+            <h1>Autumn collection <br>UP TO 20% OFF</h1>
+            <button class="text-uppercase">Shop Now</button>
+        </div>
+
+    </section>
+
+    <section id="clothes">
+        <div class="contain1">
+            <h3>Dresses & jumpsuit</h3>
+            <hr>
+            <p>Here you can check out our new products with fair price on rymo</p>
+
+        </div>
+        <div class="roww1">
+            <div class="product1">
+                <img  src="cloth1.jpg">
+                <h5 class="p-name">Suit</h5>
+                <h4 class="p-price">$302.00</h4>
+                <button class="buy-btn">Buy now</button>
+            </div>
+
+            <div class="product1">
+                <img  src="cloth2.jpg">
+                <h5 class="p-name">mini dress</h5>
+                <h4 class="p-price">$100.00</h4>
+                <button class="buy-btn">Buy now</button>
+            </div>
+
+            <div class="product1">
+                <img  src="cloth3.jpg">
+                <h5 class="p-name">Roundneck</h5>
+                <h4 class="p-price">$400.00</h4>
+                <button class="buy-btn">Buy now</button>
+            </div>
+
+            <div class="product1">
+                <img src="cloth4.jpg">
+                <h5 class="p-name">Roundneck</h5>
+                <h4 class="p-price">$30.00</h4>
+                <button class="buy-btn">Buy now</button>
+            </div>
+           
+        </div>
+
+    </section>
+
+    
+    <section id="banner1">
+        <div class="containerr">
+            <h4>MID SEASON'S SALE</h4>
+            <h1>Autumn collection <br>UP TO 20% OFF</h1>
+            <button class="text-uppercase">Shop Now</button>
+        </div>
+
+    </section>
+
+       
+    <section id="watches">
+        <div class="contain1">
+            <h3>watches</h3>
+            <hr>
+            <p>Here you can check out our new products with fair price on rymo</p>
+
+        </div>
+        <div class="roww1">
+            <div class="product1">
+                <img  src="wac1.jpg">
+                <h5 class="p-name">Rolex</h5>
+                <h4 class="p-price">$32.00</h4>
+                <button class="buy-btn">Buy now</button>
+            </div>
+
+            <div class="product1">
+                <img  src="wac.jpg">
+                <h5 class="p-name">Gucci</h5>
+                <h4 class="p-price">$10.00</h4>
+                <button class="buy-btn">Buy now</button>
+            </div>
+
+            <div class="product1">
+                <img  src="wac3.jpg">
+                <h5 class="p-name">Armani</h5>
+                <h4 class="p-price">$40.00</h4>
+                <button class="buy-btn">Buy now</button>
+            </div>
+
+            <div class="product1">
+                <img src="wac2.jpg">
+                <h5 class="p-name">Armani</h5>
+                <h4 class="p-price">$30.00</h4>
+                <button class="buy-btn">Buy now</button>
+            </div>
+           
+        </div>
+
+    </section>
+
+
+
+    <section id="shoes">
+        <div class="contain1">
+            <h3>shoes</h3>
+            <hr>
+            <p>Here you can check out our new products with fair price on rymo</p>
+
+        </div>
+        <div class="roww1">
+            <div class="product1">
+                <img  src="shoee2.jpg">
+                <h5 class="p-name">Versace</h5>
+                <h4 class="p-price">$352.00</h4>
+                <button class="buy-btn">Buy now</button>
+            </div>
+
+            <div class="product1">
+                <img  src="shoee8.jpg">
+                <h5 class="p-name">Nike</h5>
+                <h4 class="p-price">$100.00</h4>
+                <button class="buy-btn">Buy now</button>
+            </div>
+
+            <div class="product1">
+                <img  src="shoee5.jpg">
+                <h5 class="p-name">Adidas</h5>
+                <h4 class="p-price">$400.00</h4>
+                <button class="buy-btn">Buy now</button>
+            </div>
+
+            <div class="product1">
+                <img src="shoee4.jpg">
+                <h5 class="p-name">Puma</h5>
+                <h4 class="p-price">$300.00</h4>
+                <button class="buy-btn">Buy now</button>
+            </div>
+           
+        </div>
+
+    </section>
+
+    <footer class="foot">
+        <div class="row">
+            <div class="footer-one">
+                <img src="logo2.png" style="padding-bottom: 25px;">
+                <p>we will give you the best products in all specific goods</p>
+
+            </div>
+            <div class="footer-one">
+                <h5>featured</h5>
+                <ul>
+                    <li>men</li>
+                    <li>women</li>
+                    <li>boys</li>
+                    <li>girls</li>
+                    <li>shoes</li>
+                    <li>clothes</li>
+                    <li>new arrival</li>
+                    
+                </ul>
+            </div>
+
+            <div class="footer-one">
+                <h5>Contact Us</h5>
+                <div>
+                    <h6>ADDRESS</h6>
+                    <p>IKEJA, LAGOS</p>
+                </div>
+
+                <div>
+                    <h6>PHONE</h6>
+                    <p>08166489562, 08055603221</p>
+                </div>
+
+                <div>
+                    <h6>EMAIL</h6>
+                    <p>Ademolawaliyu1@gmail.com</p>
+                </div>
+              
+            </div>
+
+
+            <div class="footer-one">
+                <h5 class="h5">Instagram</h5>
+                <div class="row11">
+                    <img src="an1.jpg" alt="">
+                    <img src="an2.jpg" alt="">
+                    <img src="an3.jpg" alt="">
+                    <img src="an4.jpg" alt="">
+                    <img src="an5.jpg" alt="">
+                    <img src="an6.jpg" alt="">
+                </div>
+           
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            <div class="row12">
+                <img src="payment.png" alt="">
+                <p>Habeeb @ 2023. All Rights are reserved</p>
+            </div>
+        </div>
+
+    </footer>
+
+ 
+
+</body>
+
+<script>
+
+var h1 = document.querySelector(".text-uppercase");
+isblue = false;
+iscyan = false;
+
+setInterval(function(){
+    if(isblue) {
+        h1.style.color = "salmon";
+    } else {
+        h1.style.color = "blue";
+    }
+    isblue = !isblue;
+    iscyan = !iscyan;
+}, 1000);
+
+
+</script>
+</html>

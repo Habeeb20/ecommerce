@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+</head>
+
+<style>
+ 
+@import url('https://fonts.googleapis.com/css2?family=Inria+Serif:wght@300;400&family=Inter:wght@100;300;400;600&family=Jacques+Francois&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Jacques Francois', serif;
+}
+body{
+    background: #ECE0D1;
+}
+.nav{
+    display: grid;
+    grid-template-columns: 13% 64% 23%;
+    margin-top: 15px;
+}
+.text-menu{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.list{
+    display: flex;
+    margin-right: 40px;
+}
+.list li a::after{
+    content: "";
+    position: absolute;
+    transition: .3s;
+    height: 3px;
+    width: 0%;
+    bottom: 1px;
+    right: 1px;
+    background:#967259;
+}
+.list li a:hover::after{ 
+    width: 100%;
+}
+.list li{
+    list-style: none;
+}
+.list li a{
+    text-decoration: none;
+    padding: 5px;
+    margin: 5px 40px;
+    font-size: 17px;
+    color: #38220F;
+    position: relative;
+}
+.logo{
+    display: flex;
+    justify-content: flex-end;
+}
+.logo img{
+    width: 120px;
+}
+.search-bar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.outer-search{
+    width: 202px;
+    height: 40px;
+    background: #634832;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search-icon img{
+    width: 21px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+.search{
+    width: 200px;
+    height: 38px;
+    background: #634832;
+    border-radius: 19px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    transition:  0.1s;
+}
+.search:hover{
+    border: 1px solid white;
+}
+
+.search-text{
+    margin: 5px 10px;
+}
+.search-text input{
+    background: #634832;
+    outline: none;
+    border: none;
+    color: white;
+    width: 130px;
+    height: 30px;
+    font-size: 17px;
+}
+.location-icon img{
+    width: 20px;
+    margin-top: 3px;
+    margin-right: 50px;
+    transition: 0.3s;
+    cursor: alias;
+}
+.location-icon img:hover{
+    width: 22px;
+    opacity: .9;
+}
+
+
+/* reader section starts */
+
+.reader{
+    margin-top: 50px;
+    background-image: url('/images/Rectangle7.png') ;
+    background-size: cover;
+    width: 100%;
+    height: 674px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 7% 86% 7%;
+}
+.rectangle-2{
+    /* width: 1250px;
+    height: 430px; */
+    /* border: 2px solid red; */
+    margin-top: 100px;
+    grid-column-start: 2;
+}
+.rectangle-2{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.text-area{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* flex-direction: column; */
+}
+.text-area-2{
+    /* width: 492px; */
+    /* height: 370px; */
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    /* border: 2px solid white; */
+    margin-bottom: 30px;
+}
+.text-area-2 h2{
+    font-size: 48px;
+    color: black;
+    font-weight: 400;
+    margin-left: 30px;
+}
+.text-area-2 h2 span{
+    margin-left: 40px;
+}
+.text-area-2 h1{
+    font-size: 64px;
+    color: black;
+    font-weight: 400;
+    margin-bottom: 30px;
+    line-height: 84px;
+}
+.text-area-2 p{
+    font-size: 20px;
+    color: black;
+    font-weight: 400;
+}
+.price-button{
+    display: flex;
+    /* border: 2px solid black; */
+    margin-top: 60px;
+}
+.price-button .price{
+    font-size: 40px;
+    color: black;
+    font-family: 'Inria Serif', serif;
+}
+.price-button .brew-button{
+    /* outline: 1px solid #38220F; */
+    background: #ECE0D1;
+    width: 160px;
+    height: 45px;
+    border-radius: 23px;
+    margin-left: 45px;
+    cursor: pointer;
+    transition: .3s;
+}
+.price-button .brew-button:hover {
+    background: #38220F;
+    outline: 1px solid #ECE0D1;
+}
+.price-button .brew-button:hover .brew{
+    color: #fff;
+}
+.price-button .brew-button p{
+    font-size: 32px;
+    color: #fff;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    font-weight: 400;
+    color: #38220F;
+}
+
+.image-area{
+    display: flex;
+    justify-content: flex-end;
+    align-items:flex-end;
+}
+.image-1 .img-1{
+    width: 52px;
+    margin-bottom: 100px;
+    margin-right: 70px;
+}
+.image-1 .img-2{
+    width: 373px;
+    border: 20px solid #ECE0D1;
+    opacity: .85;
+}
+
+/* reader-2  */
+
+.reader-2{
+    display: grid;
+    grid-template-columns: 10% 20% 60% 10%;
+}
+.reader-2-image{
+    grid-column-start: 2;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.reader-2-image img{
+    width: 398px;
+}
+.reader-2-text{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* flex-direction: column; */
+    /* border: 2px solid red; */
+}
+.reader-2-text-area{
+    /* width: 520px; */
+    /* height: 370px; */
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    /* border: 2px solid white; */
+    margin-top: 90px;
+}
+.reader-2-text-area h2{
+    font-size: 48px;
+    color:#634832;
+    font-weight: 400;
+    margin-bottom: 20px;
+    
+}
+.reader-2-text-area h1{
+    font-size: 48px;
+    color:#38220F;
+    font-weight: 400;
+    line-height: 63px;
+}
+.reader-2-text-area p{
+    font-size: 20px;
+    color: #967259;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+.line{
+    width: 480px;
+}
+.reader-2-text-price-button{
+    display: flex;
+    /* border: 2px solid black; */
+    margin-top: 20px;
+}
+.reader-2-text-price-button .price{
+    font-size: 40px;
+    color:#38220F;
+    font-family: 'Inria Serif', serif;
+}
+.reader-2-text-price-button .brew-button{
+    /* border: 2px solid red; */
+    background: #38220F;
+    width: 160px;
+    height: 45px;
+    border-radius: 23px;
+    margin-left: 45px;
+    cursor: pointer;
+    transition: .3s;
+}
+.reader-2-text-price-button .brew-button:hover {
+    background:#ECE0D1;
+    outline: 2px solid #38220F;
+}
+.reader-2-text-price-button .brew-button:hover .brew{
+    color:#38220F;
+    margin-bottom: 5px;
+}
+.reader-2-text-price-button .brew-button p{
+    font-size: 32px;
+    color: #fff;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    font-weight: 400;
+}
+
+hr{
+    border: 1px solid #38220F;
+    margin-top: 10px;
+}
+
+/* reader-3 */
+
+.reader-3{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+}
+.heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+}
+.heading h1{
+    font-size: 48px;
+    font-weight: 400;
+    color: #38220F;
+}
+.heading p{
+    font-size: 30px;
+    font-weight: 400;
+    width: 450px;
+    text-align: center;
+    color: #634832;
+}
+.menu{
+    display: grid;
+    grid-template-columns: 5% 30% 30% 30% 5%;
+    width: 100%;
+}
+.menu-1{
+    grid-column-start: 2;
+}
+.menu-1, .menu-2, .menu-3{
+    /* border: 2px solid rebeccapurple; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inner-menu-1, .inner-menu-2,.inner-menu-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 345px;
+    height: 500px;
+    /* border: 2px solid black; */
+    box-shadow: 0px 4px 45px 1px rgba(99, 72, 50, 0.23);
+}
+.inner-menu-1 h1, .inner-menu-2 h1, .inner-menu-3 h1{
+    text-align: center;
+    color:#38220F;
+    font-size: 30px;
+    font-weight: 400;
+}
+.line-2{
+    text-align: center;
+    color: #967259;
+    font-size: 20px;
+    margin-bottom: 35px;
+    margin-top: 10px;
+    width: 250px;
+}
+.menu-button{
+    display: flex;
+    /* border: 2px solid black; */
+    margin-top: 20px;
+}
+.menu-button .price{
+    font-size: 40px;
+    color:#38220F;
+    font-family: 'Inria Serif', serif;
+}
+.menu-button .brew-button{
+    /* border: 2px solid red; */
+    background: #38220F;
+    width: 160px;
+    height: 45px;
+    border-radius: 23px;
+    margin-left: 34px;
+    cursor: pointer;
+    transition: .3s;
+}
+.menu-button .brew-button:hover {
+    background:#ECE0D1;
+    outline: 2px solid #38220F;
+}
+.menu-button .brew-button:hover .brew{
+    color:#38220F;
+    margin-bottom: 5px;
+}
+.menu-button .brew-button p{
+    font-size: 32px;
+    color: #fff;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    font-weight: 400;
+}
+.menu-1 img{
+    width: 119px;
+    height: 207px;
+    margin-top: 22px;
+    margin-bottom: 16px;
+}
+.menu-3 img{
+    width: 172px;
+    height: 201px;
+    margin-top: 45px;
+}
+.menu-2 img{
+    width: 113px;
+    height: 219px;
+    margin-top: 16px;
+    margin-bottom: 11px;
+}
+
+
+/* reader-4 */
+.reader-4{
+    margin-top: 100px;
+}
+.reader-4-rectangle{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    background: linear-gradient(97.48deg, #967259 -2.24%, rgba(150, 114, 89, 0) 136.84%);
+    height: 520px;
+}
+.reader-4 .text-area{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.reader-4 .text-area h3{
+    font-size: 32px;
+    margin-bottom: 25px;
+    color: #fff;
+}
+.reader-4 .text-area .reader-4-line{
+    width: 580px;
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 39px;
+}
+.learn{
+    font-size: 32px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    font-weight: 400;
+    color: #38220F;
+}
+.reader-4 .button{
+    /* border: 2px solid red; */
+    background: #ECE0D1;
+    width: 160px;
+    height: 45px;
+    border-radius: 23px;
+    /* margin-left: 34px; */
+    outline: 1px solid #38220F;
+    cursor: pointer;
+    transition: .3s;
+}
+.reader-4 .button:hover {
+    background:#38220F;
+    transform: translateY(-5px);
+    box-shadow: 1px 0px 10px 0px;
+    /* outline: 1px solid #ECE0D1; */
+}
+.reader-4 .button:hover .learn{
+    color:#fff;
+    margin-bottom: 5px;
+    opacity: .9;
+}
+.reader-4 .image-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.reader-4 .image-area img{
+    height: 402px;
+    border: 20px solid #DBC1AC;
+    opacity: .85;
+}
+
+/* reader-5 */
+
+.reader-5{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 80px;
+}
+.reader-5-heading h1{
+    font-size: 48px;
+    color: #38220F;
+    font-weight: 400;
+}
+.reader-5-heading p{
+    font-size: 30px;
+    color: #634832;
+    text-align: center;
+    width: 500px;
+}
+.reader-5-rectangle-1{
+    display: grid;
+    grid-template-columns:  50% 50% ;
+    width: 100%;
+    margin-top: 70px;
+}
+.reader-5-rectangle-1 .image-area{
+    /* grid-column-start: 2; */
+    /* margin-left: 100px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.reader-5-rectangle-1 .text-area{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.reader-5-rectangle-1 .text-area h2{
+    font-size: 32px;
+    color: #634832;
+    font-weight: 400;
+    margin-bottom: 7px;
+}
+.reader-5-line{
+    width: 410px;
+    text-align: center;
+    font-size: 24px;
+    color: #967259;
+    margin-bottom: 35px;
+}
+.reader-5 .button{
+    /* border: 2px solid red; */
+    background: #ECE0D1;
+    width: 160px;
+    height: 45px;
+    border-radius: 23px;
+    /* margin-left: 34px; */
+    outline: 1px solid #38220F;
+    cursor: pointer;
+    transition: .3s;
+    background:#38220F;
+}
+.reader-5 .button:hover {
+    background: #ECE0D1;
+    transform: translateY(-5px);
+    box-shadow: 1px 0px 10px 0px;
+    outline: 1px solid #ECE0D1;
+}
+.reader-5 .button:hover .pick{
+    color:#38220F;
+    margin-bottom: 5px;
+    opacity: .9;
+}
+.pick{
+    color: #ECE0D1;
+    font-size: 32px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    font-weight: 400;
+}
+.reader-5-rectangle-2{
+    display: grid;
+    grid-template-columns:  50% 50% ;
+    width: 100%;
+    margin-top: 80px;
+}
+.reader-5-rectangle-2 .image-area{
+    display: flex;
+    justify-content: center;
+}
+.reader-5-rectangle-2 .text-area{
+    /* grid-column-start: 2; */
+    /* margin-right: 100px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.reader-5-rectangle-2 h2{
+    font-size: 32px;
+    color: #634832;
+    font-weight: 400;
+    margin-bottom: 7px;
+}
+.reader-5 img{
+    border: 15px solid #D6C2B3;
+    height: 325px;
+}
+
+
+ 
+/* reader-6  */
+.reader-6{
+    margin-top: 100px;
+}
+.reader-6-rectangle{
+    display: grid;
+    grid-template-columns: 45% 55%;
+    background: linear-gradient(96.18deg, #DBC1AC 0%, rgba(219, 193, 172, 0) 100%);
+    height: 520px;
+}
+.reader-6-rectangle .text-area{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.reader-6-rectangle .text-area h3{
+    font-size: 32px;
+    margin-bottom: 16px;
+    color: #634832;
+    font-weight: 400;
+}
+.reader-6 .text-area .reader-6-line{
+    width: 430px;
+    text-align: center;
+    font-size: 24px;
+    color: #967259;
+    margin-bottom: 50px;
+}
+.reader-6-rectangle .learn{
+    font-size: 32px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    font-weight: 400;
+    color: #38220F;
+}
+.reader-6 .button{
+    /* border: 2px solid red; */
+    background: #ECE0D1;
+    width: 170px;
+    height: 45px;
+    border-radius: 23px;
+    /* margin-left: 34px; */
+    outline: 1px solid #38220F;
+    cursor: pointer;
+    transition: .3s;
+}
+.reader-6 .button:hover {
+    background:#38220F;
+    transform: translateY(-5px);
+    box-shadow: 1px 0px 10px 0px;
+    /* outline: 1px solid #ECE0D1; */
+}
+.reader-6 .button:hover .learn{
+    color:#fff;
+    margin-bottom: 5px;
+    opacity: .9;
+}
+.reader-6 .image-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.reader-6 .image-area img{
+    height: 402px;
+    border: 20px solid #DBC1AC;
+    opacity: .85;
+}
+
+
+/* reader-7 */
+
+.reader-7{
+    margin-top: 100px;
+}
+.reader-7-rectangle{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 520px;
+}
+.reader-7 .text-area{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.reader-7 .text-area h3{
+    font-size: 48px;
+    font-weight: 400;
+    margin-bottom: 5px;
+    color: #38220F;
+}
+.reader-7 .text-area .reader-7-line{
+    width: 387px;
+    text-align: center;
+    font-size: 32px;
+    color: #634832;
+    margin-bottom: 29px;
+    margin-left: 80px;
+}
+.learn{
+    font-size: 32px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    font-weight: 400;
+    color: #38220F;
+}
+.reader-7 .button{
+    /* border: 2px solid red; */
+    background: #ECE0D1;
+    width: 160px;
+    height: 45px;
+    border-radius: 23px;
+    /* margin-left: 34px; */
+    outline: 1px solid #38220F;
+    cursor: pointer;
+    transition: .3s;
+}
+.reader-7 .button:hover {
+    background:#38220F;
+    transform: translateY(-5px);
+    box-shadow: 1px 0px 10px 0px;
+    /* outline: 1px solid #ECE0D1; */
+}
+.reader-7 .button:hover .learn{
+    color:#fff;
+    margin-bottom: 5px;
+    opacity: .9;
+}
+.reader-7-line-2{
+    margin-top: 10px;
+    margin-right: 50px;
+}
+.reader-7 .image-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.reader-7 .image-area img{
+    height: 402px;
+    border: 20px solid #DBC1AC;
+    opacity: .85;
+}
+
+/* footer  */
+footer{
+    background: #634832;
+}
+footer span{
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    opacity: .7;
+    margin-bottom: 40px;
+    cursor:pointer;
+    transition: .2s;
+}
+footer span:hover{
+    opacity: 1;
+}
+.foot{
+    display: grid;
+    grid-template-columns: 10% repeat(5, 1fr) ;
+    color: #fff;
+    
+}
+.about{
+    display: flex;
+    flex-direction: column;
+    grid-column-start: 2;
+    /* align-items:center; */
+    font-size: 20px;
+    
+}
+.about span:nth-child(1){
+    font-size: 24px;
+    margin-bottom: 40px;
+    font-weight: 400;
+    margin-top: 50px;
+    opacity: 1;
+}
+.order{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    font-size: 20px;
+}
+.order span:nth-child(1){
+    font-size: 24px;
+    margin-bottom: 40px;
+    font-weight: 400;
+    margin-top: 50px;
+    opacity: 1;
+}
+.location{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    font-size: 20px;
+}
+.location span:nth-child(1){
+    font-size: 24px;
+    margin-bottom: 40px;
+    font-weight: 400;
+    margin-top: 50px;
+    opacity: 1;
+}
+.social{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    font-size: 20px;
+}
+.social span:nth-child(1){
+    font-size: 24px;
+    margin-bottom: 40px;
+    font-weight: 400;
+    margin-top: 50px;
+    opacity: 1;
+}
+.language{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+.language span{
+    font-size: 24px;
+    margin-bottom: 40px;
+    font-weight: 400;
+    margin-top: 50px;
+    opacity: 1;
+}
+.language .search_bar{
+    width: 180px;
+    height: 40px;
+    background: #967259;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+}
+.language .search_bar a{
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+    margin-left: 10px;
+    font-size: 20px;
+    opacity: .8;
+    font-weight: 300;
+    margin-bottom: 0px;
+
+}
+.language .search_bar span{
+    margin-bottom:53px;
+    margin-left: 30px;
+}
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 500,
+    'GRAD' 200,
+    'opsz' 48
+  }
+
+</style>
+
+<body>
+    <div class="navbar">
+        <div class="nav">
+            <div class="logo">
+                <img src="logo 1.png" alt="">
+            </div>
+            <div class="text-menu">
+                <ul class="list">
+                    <li><a href="#" class="links">Drinks</a></li>
+                    <li><a href="#" class="links">Gifts</a></li>
+                    <li><a href="#" class="links">Food</a></li>
+                    <li><a href="#" class="links">Delivery</a></li>
+                    <li><a href="#" class="links">Specials</a></li>
+                </ul>
+            </div>
+            <div class="search-bar">
+                <div class="outer-search">
+                    <div class="search">
+                        <div class="search-icon">
+                            <img src="Vector.svg" alt="">
+                        </div>
+                        <div class="search-text">
+                            <input type="text" name="search" id="" placeholder="Search">
+                        </div>
+                    </div>
+                </div>
+                <div class="location-icon">
+                    <img src="Frame 2.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="reader">
+        <!-- <div class="rectangle-1"> -->
+        <div class="rectangle-2">
+            <div class="text-area">
+                <div class="text-area-2">
+                    <h2>Expensive taste <span><img src="cup.svg" alt=""></span></h2>
+                    <h1>Expensive you</h1>
+                    <p class="line">“It doesn’t matter where you’re from—or how you feel…there’s always peace in a
+                        strong cup of
+                        coffee.”—Gabriel Bá</p>
+                    <div class="price-button">
+                        <div class="price">$4.90</div>
+                        <div class="brew-button">
+                            <p class="brew">Brew</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="image-area">
+                <div class="image-1">
+                    <img class="img-1" src="cup.svg" alt="">
+                    <img class="img-2" src="pexels-ethem-kartal-14189213 2.png" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- </div> -->
+    </section>
+    <section class="reader-2">
+        <div class="reader-2-image">
+            <img src="pexels-min-che-7491905-removebg-preview 2.png" alt="">
+        </div>
+        <div class="reader-2-text">
+            <div class="reader-2-text-area">
+                <h1>Try Our Newest Drink</h1>
+                <h2>Made with Passion</h2>
+                <p class="line">“It doesn’t matter where you’re from—or how you feel…there’s always peace in a strong
+                    cup of
+                    coffee.”—Gabriel Bá</p>
+                <div class="reader-2-text-price-button">
+                    <div class="price">$3.90</div>
+                    <div class="brew-button">
+                        <p class="brew">Brew</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <section class="reader-3">
+        <div class="heading">
+            <h1>Popular</h1>
+            <p>Try Our most liked Drinks with
+                your special one</p>
+        </div>
+        <div class="menu">
+            <div class="menu-1">
+                <div class="inner-menu-1">
+                    <img src="pexels-alexander-mils-2045362-removebg-preview 2.png" alt="">
+                    <div class="menu-desc">
+                        <h1>Strawberry</h1>
+                        <h1>Shake</h1>
+                        <p class="line-2">Coffee smells like freshly ground heaven</p>
+                    </div>
+                    <div class="menu-button">
+                        <div class="price">$3.90</div>
+                        <div class="brew-button">
+                            <p class="brew">Brew</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-2">
+                <div class="inner-menu-2">
+                    <img src="pexels-bich-tran-2362391-removebg-preview 2.png" alt="">
+                    <div class="menu-desc">
+                        <h1>Espresso</h1>
+                        <h1>Martini</h1>
+                        <p class="line-2">Coffee smells like freshly ground heaven</p>
+                    </div>
+                    <div class="menu-button">
+                        <div class="price">$3.90</div>
+                        <div class="brew-button">
+                            <p class="brew">Brew</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-3">
+                <div class="inner-menu-3">
+                    <img src="pexels-freestocksorg-214333-removebg-preview 2.png" alt="">
+                    <div class="menu-desc">
+                        <h1>Caramel</h1>
+                        <h1>Latte</h1>
+                        <p class="line-2">Coffee smells like freshly ground heaven</p>
+                    </div>
+                    <div class="menu-button">
+                        <div class="price">$3.90</div>
+                        <div class="brew-button">
+                            <p class="brew">Brew</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="reader-4">
+        <div class="reader-4-rectangle">
+            <div class="text-area">
+                <h3>Cuisines from around the World</h3>
+                <p class="reader-4-line">We provide a wide variety of food & drinks from all over over the world
+                    covering Japanese, Chinese, Indian, French cuisines.So, don’t forget to check out our Meal option.
+                </p>
+                <div class="button">
+                    <p class="learn">Learn</p>
+                </div>
+            </div>
+            <div class="image-area">
+                <img src="unsplash_q8rgxkAgdz8.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="reader-5">
+        <div class="reader-5-heading">
+            <h1>Gifts and Card Section</h1>
+            <p class="reader-5-line">Try Our most liked Drinks with
+                your special one</p>
+        </div>
+        <div class="reader-5-rectangle-1">
+            <div class="image-area">
+                <img src="Gft Card.png" alt="">
+            </div>
+            <div class="text-area">
+                <h2>Custom Designed Gift Card</h2>
+                <p class="reader-5-line">We provide custome made gift cards
+                    You pick, We Design </p>
+                <div class="button">
+                    <p class="pick">Pick</p>
+                </div>
+            </div>
+        </div>
+        <div class="reader-5-rectangle-2">
+            <div class="text-area">
+                <h2>Gift Shop</h2>
+                <p class="reader-5-line">We have special gift shop for who wants to take souviniers for their relatives
+                    or co-workers </p>
+                <div class="button">
+                    <p class="pick">Shop</p>
+                </div>
+            </div>
+            <div class="image-area">
+                <img src="pexels-meruyert-gonullu-6161669 2.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="reader-6">
+        <div class="reader-6-rectangle">
+            <div class="image-area">
+                <img src="unsplash_X3Sinj7qZGc.png" alt="">
+            </div>
+            <div class="text-area">
+                <h3>Opening New Tea Service</h3>
+                <p class="reader-6-line">From December We are Planning to start Tea Service in Our Cafe
+                    So, tea lovers can join us as well.</p>
+                <div class="button">
+                    <p class="learn">Learn</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="reader-7">
+        <div class="reader-7-rectangle">
+            <div class="text-area">
+                <h3>Free Delivery</h3>
+                <p class="reader-7-line">Enjoy free delivery within
+                    5km radius </p>
+                <div class="button">
+                    <p class="learn">Shop</p>
+                </div>
+                <p class="reader-7-line-2">*1$ delivery charge per extra 2km </p>
+            </div>
+            <div class="image-area">
+                <img src="6982750_3333449-removebg-preview 2.png" alt="">
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="foot">
+            <div class="about">
+                <span>About</span>
+                <span>Our Coffee</span>
+                <span>Our Company</span>
+                <span>Service</span>
+                <span>Archive</span>
+            </div>
+            <div class="order">
+                <span>Order & Pickup</span>
+                <span>Order on the App</span>
+                <span>Order on the Web</span>
+                <span>Delivery</span>
+                <span>Return Policy</span>
+                <span>Bulk Order</span>
+            </div>
+            <div class="location">
+                <span>Location</span>
+                <span>New york</span>
+                <span>Sydney</span>
+                <span>New Delhi</span>
+                <span>Paris</span>
+                <span>Tokyo</span>
+            </div>
+            <div class="social">
+                <span>Social Impact</span>
+                <span>People</span>
+                <span>Planet</span>
+                <span>Environment</span>
+            </div>
+            <div class="language">
+                <span>Language</span>
+                <div class="search_bar">
+                    <a href="">English</a><span class="material-symbols-outlined">
+                       
+                        </span>
+                </div>
+                <div class="social">
+
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
+
+
